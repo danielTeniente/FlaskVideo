@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+</head>
+<body class="container p-4">
+	<h1 class="display-4 text-center title mt-4">Usuarios y bonos</h1>
+	<div class="row">
+		<div class="col-md-4 offset-md-4 my-auto">
+			<div class="card">
+				<div class="card-body">
+					<ul class="list-group">
+						{% for usuario in list %}
+							<li class="list-group-item">
+								<span class="">Nombre: {{usuario[0]}}</span>
+								<br>
+								<span class="">Bono: {{usuario[1]}}</span>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>							
+			</div>
+		</div>
+	</div>
+	<a href="/logout">Logout</a>
+</body>
+</html>
